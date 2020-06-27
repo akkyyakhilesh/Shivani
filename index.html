@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>My page</title>
+	</head>
+	<body>
+		<div class="container">
+			<button onclick="openSignup()">Signup</button>
+			<button onclick="openLogin()">Login</button>
+
+			<div id="signup" *ngIf="isSignup" style="display:none">
+				Name:<input type="text"/><br>
+				Email:<input type="text"/><br>
+				New Password:<input type="password"/><br>
+				Repeat Password:<input type="password"/>
+			</div>
+			<div id="login" *ngIF="isLogin" style="display:none">
+				Username:<input type="text"/><br>
+				Password:<input type="password"/>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script>
+
+
+function openSignup(){
+document.getElementById("signup").style.display="Block";
+document.getElementById("login").style.display="none";
+
+
+}
+
+ function openLogin(){
+document.getElementById("login").style.display="Block";
+document.getElementById("signup").style.display="none";
+
+
+}
+</script>
+
+
